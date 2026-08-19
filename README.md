@@ -12,7 +12,7 @@ A Python-based ROS 2 package designed for using Actions & services in a robot si
 
 -Custom interfaces: maze_msgs (contains MoveYaw.action)
 
-##Build Instructions
+## Build Instructions
 
 -Clone this repository into your ROS 2 workspace's src folder:
 
