@@ -18,7 +18,7 @@ A Python-based ROS 2 package designed for using Actions & services in a robot si
 
 ```Bash
 cd ~/ros2_ws/src
-git clone <your-repository-url>
+git clone https://github.com/Ben-ket/Group7-Task7-Maze.git
 ```
 -Build the workspace using colcon:
 
