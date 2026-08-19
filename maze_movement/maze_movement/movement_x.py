@@ -29,6 +29,7 @@ class MovementX(Node):
 
         # Starting position
         self.start_x = None
+        self.start_y = None
 
         # How far we want to move
         self.target_distance = 1.0
@@ -45,12 +46,15 @@ class MovementX(Node):
     def odom_callback(self, msg):
 
         current_x = msg.pose.pose.position.x
+        current_y = msg.pose.pose.position.y
 
         # Save the starting position
         if self.start_x is None:
             self.start_x = current_x
+            self.start_y = current_y
 
         self.current_x = current_x
+        self.current_y = current_y
 
     def move_robot(self):
 
@@ -58,7 +62,7 @@ class MovementX(Node):
         if self.start_x is None:
             return
 
-        distance_moved = abs(self.current_x - self.start_x)
+        distance_moved = abs(self.current_x - self.start_x) + abs(self.current_y - self.start_y) 
 
         # If we reached the target
         if distance_moved >= self.target_distance:
@@ -68,7 +72,7 @@ class MovementX(Node):
             self.get_logger().info(
                 'Movement finished!'
             )
-
+            rclpy.shutdown()
             return
 
         # Keep moving forward
