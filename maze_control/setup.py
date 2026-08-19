@@ -30,6 +30,7 @@ setup(
         'console_scripts': [
             'wall_retraction_service = maze_control.wall_retraction_service:main',
             'maze_timer_node = maze_control.maze_timer_node:main',
+            'switch_walls = maze_control.switch_walls:main',
         ],
     },
 )
