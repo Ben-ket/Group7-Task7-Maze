@@ -10,8 +10,6 @@ A Python-based ROS 2 package designed for using Actions & services in a robot si
 
 -Python packages: rclpy, geometry_msgs, nav_msgs, numpy
 
--Custom interfaces: maze_msgs (contains MoveYaw.action)
-
 ## Build Instructions
 
 -Clone this repository into your ROS 2 workspace's src folder:
