@@ -28,6 +28,7 @@ setup(
     'console_scripts': [
         'movement_x = maze_movement.movement_x:main',
         'movement_yaw = maze_movement.movement_yaw:main',
+        'maze_solver_client = maze_movement.maze_solver_client:main',
     ],
 },
 )
