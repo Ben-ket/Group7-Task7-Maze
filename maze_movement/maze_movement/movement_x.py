@@ -1,108 +1,100 @@
+import math
 import rclpy
+from rclpy.action import ActionServer
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
+from maze_msgs.action import MoveX
 
-import math
 
-
-class MovementX(Node):
+class MovementXServer(Node):
 
     def __init__(self):
-        super().__init__('movement_x')
+        super().__init__('movement_x_server')
+        self._cb_group = ReentrantCallbackGroup()
 
-        # Publisher for robot movement
-        self.cmd_vel_publisher = self.create_publisher(
-            Twist,
-            '/cmd_vel',
-            10
+        self._action_server = ActionServer(
+            self,
+            MoveX,
+            'move_robot_x',
+            self.execute_callback,
+            callback_group=self._cb_group,
         )
 
-        # Subscriber for robot position
-        self.odom_subscriber = self.create_subscription(
+
+
+        self._cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self._odom_sub = self.create_subscription(
             Odometry,
             '/odom',
             self.odom_callback,
-            10
+            10,
+            callback_group=self._cb_group,
         )
 
-        # Starting position
-        self.start_x = None
-        self.start_y = None
-
-        # How far we want to move
-        self.target_distance = 1.0
-
-        # Robot speed
-        self.speed = 0.2
-
-        # Check movement regularly
-        self.timer = self.create_timer(
-            0.1,
-            self.move_robot
-        )
+        self.current_x = None
+        self.current_y = None
 
     def odom_callback(self, msg):
+        self.current_x = msg.pose.pose.position.x
+        self.current_y = msg.pose.pose.position.y
 
-        current_x = msg.pose.pose.position.x
-        current_y = msg.pose.pose.position.y
-
-        # Save the starting position
-        if self.start_x is None:
-            self.start_x = current_x
-            self.start_y = current_y
-
-        self.current_x = current_x
-        self.current_y = current_y
-
-    def move_robot(self):
-
-        # We don't have odometry yet
-        if self.start_x is None:
-            return
-
-        distance_moved = abs(self.current_x - self.start_x) + abs(self.current_y - self.start_y) 
-
-        # If we reached the target
-        if distance_moved >= self.target_distance:
-
-            self.stop_robot()
-
-            self.get_logger().info(
-                'Movement finished!'
-            )
-            rclpy.shutdown()
-            return
-
-        # Keep moving forward
-        msg = Twist()
-        msg.linear.x = self.speed
-        msg.angular.z = 0.0
-
-        self.cmd_vel_publisher.publish(msg)
-
-    def stop_robot(self):
-
-        msg = Twist()
-
-        msg.linear.x = 0.0
-        msg.angular.z = 0.0
-
-        self.cmd_vel_publisher.publish(msg)
+    def execute_callback(self, goal_handle):
 
 
-def main(args=None):
+        while self.current_x is None or self.current_y is None:
+            self.get_logger().info('Waiting for /odom...')
+            rclpy.spin_once(self, timeout_sec=0.1)
 
-    rclpy.init(args=args)
+        start_x = self.current_x
+        start_y = self.current_y
+        target_dist = abs(goal_handle.request.distance)
+        speed = goal_handle.request.speed if goal_handle.request.speed != 0 else 0.2
 
-    node = MovementX()
+        if goal_handle.request.distance < 0:
+            speed = -abs(speed)
 
-    rclpy.spin(node)
+        twist = Twist()
+        twist.linear.x = float(speed)
 
-    node.destroy_node()
+        rate = self.create_rate(20)
 
-    rclpy.shutdown()
+        while rclpy.ok():
+            dist_traveled = math.hypot(self.current_x - start_x, self.current_y - start_y)
+
+            if dist_traveled >= target_dist:
+                break
+
+            self._cmd_pub.publish(twist)
+            rate.sleep()
+
+
+
+        stop_twist = Twist()
+        self._cmd_pub.publish(stop_twist)
+
+        goal_handle.succeed()
+        result = MoveX.Result()
+        result.success = True
+        return result
+
+
+def main():
+    rclpy.init()
+    node = MovementXServer()
+    executor = MultiThreadedExecutor()
+    executor.add_node(node)
+
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

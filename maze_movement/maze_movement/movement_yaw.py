@@ -1,38 +1,45 @@
 import math
-from geometry_msgs.msg import Twist
-from nav_msgs.msg import Odometry
+import time
+
 import rclpy
+from rclpy.action import ActionServer
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
-import numpy as np
+
+from geometry_msgs.msg import Twist
+from maze_msgs.action import MoveYaw
+from nav_msgs.msg import Odometry
 
 
-class MovementYaw(Node):
+class MovementYawServer(Node):
 
   def __init__(self):
-    super().__init__('movement_yaw')
+    super().__init__('movement_yaw_server')
 
-    self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
-    self.odom_sub = self.create_subscription(
-        Odometry, '/odom', self.odom_callback, 10
+    self.cb_group = ReentrantCallbackGroup()
+    self.current_yaw = None
+    self.odom_updated = False
+
+    self.create_subscription(
+        Odometry,
+        '/odom',
+        self.odom_callback,
+        10,
+        callback_group=self.cb_group,
     )
 
-    self.current_yaw = None
-    self.start_yaw = None
+    self.cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
-    
-    errorFactor = 1.07
-    # Rotate 90 degrees w/ margin of error included
-    self.target_angle = (np.pi / 2.0) * errorFactor
+    self._action_server = ActionServer(
+        self,
+        MoveYaw,
+        'move_robot_yaw',
+        execute_callback=self.execute_callback,
+        callback_group=self.cb_group,
+    )
 
-    self.timer = self.create_timer(0.01, self.move_robot)
-
-    self.kp = 2.0
-    self.ki = 0.02
-    self.kd = 0.1
-
-    self.integral_error = 0.0
-    self.prev_error = 0.0
-    self.tolerance = 0.001
+    self.get_logger().info('server ready')
 
   def odom_callback(self, msg):
     q = msg.pose.pose.orientation
@@ -40,63 +47,131 @@ class MovementYaw(Node):
     cosy_cosp = 1.0 - 2.0 * (q.y * q.y + q.z * q.z)
 
     self.current_yaw = math.atan2(siny_cosp, cosy_cosp)
-
-    if self.start_yaw is None:
-      self.start_yaw = self.current_yaw
-
-  def move_robot(self):
-    if self.current_yaw is None or self.start_yaw is None:
-      return
-
-
-    # Keep angle between -pi and pi
-    angle_moved = self.normalize_angle(self.current_yaw - self.start_yaw)
-    error = self.normalize_angle(self.target_angle - angle_moved)
-
-
-    # Stop when we reach the target
-    if abs(error) < self.tolerance:
-      self.stop_robot()
-      self.timer.cancel()
-      self.get_logger().info('Rotation finished!')
-      rclpy.shutdown()
-      return
-
-    dt = 0.01
-    self.integral_error += error * dt
-    derivative = (error - self.prev_error) / dt
-    self.prev_error = error
-
-    # Rotate proportionally to remaining angle
-    speed = (
-        (self.kp * error) + (self.ki * self.integral_error) + (self.kd * derivative)
-    )
-    
-    # Limit rotation speed
-    max_speed = 0.5
-    speed = max(-max_speed, min(max_speed, speed))
-
-    msg = Twist()
-    msg.angular.z = speed
-    self.cmd_vel_pub.publish(msg)
-
-  def stop_robot(self):
-    msg = Twist()
-    msg.linear.x = 0.0
-    msg.angular.z = 0.0
-    self.cmd_vel_pub.publish(msg)
+    self.odom_updated = True
 
   @staticmethod
-  def normalize_angle(angle):
+  def normalize_angle(angle: float) -> float:
     return math.atan2(math.sin(angle), math.cos(angle))
 
+  def execute_callback(self, goal_handle):
+    self.odom_updated = False
+    start_wait = time.time()
+    while not self.odom_updated and (time.time() - start_wait) < 3.0:
+      time.sleep(0.01)
 
-def main():
-  rclpy.init()
-  node = MovementYaw()
-  rclpy.spin(node)
-  node.destroy_node()
-  rclpy.shutdown()
+    if self.current_yaw is None:
+      self.get_logger().error('no /odom received, aborting action.')
+      goal_handle.abort()
+      result = MoveYaw.Result()
+      result.success = False
+      return result
+
+
+    target_relative_angle = goal_handle.request.angle
+    max_speed = abs(goal_handle.request.speed)
+    if max_speed == 0.0:
+      max_speed = 0.8
+
+    start_yaw = self.current_yaw
+    target_yaw = self.normalize_angle(start_yaw + target_relative_angle)
+
+
+    kp = 2.5
+    ki = 0.01
+    kd = 0.20
+
+    integral = 0.0
+    prev_error = 0.0
+    current_speed = 0.0
+
+  
+    max_accel = 1.5
+
+    tolerance = 0.002  
+    stable_count = 0
+    required_stable_ticks = 10
+
+    loop_rate = self.create_rate(50)
+    dt = 0.02
+
+    self.get_logger().info(
+        f'Executing turn: {math.degrees(target_relative_angle):.1f}°'
+    )
+
+    while rclpy.ok():
+  
+      if goal_handle.is_cancel_requested:
+        goal_handle.canceled()
+        self.stop_robot()
+        result = MoveYaw.Result()
+        result.success = False
+        return result
+
+      error = self.normalize_angle(target_yaw - self.current_yaw)
+
+   
+      if abs(error) <= tolerance:
+        stable_count += 1
+        if stable_count >= required_stable_ticks:
+          break
+      else:
+        stable_count = 0
+
+    
+      integral += error * dt
+      integral = max(-0.1, min(0.1, integral))  
+      derivative = (error - prev_error) / dt
+      prev_error = error
+
+      desired_speed = (kp * error) + (ki * integral) + (kd * derivative)
+      desired_speed = max(-max_speed, min(max_speed, desired_speed))
+
+      max_speed_change = max_accel * dt
+      speed_diff = desired_speed - current_speed
+      speed_diff = max(-max_speed_change, min(max_speed_change, speed_diff))
+      current_speed += speed_diff
+
+      cmd = Twist()
+      cmd.angular.z = current_speed
+      self.cmd_pub.publish(cmd)
+
+      loop_rate.sleep()
+
+    self.stop_robot()
+
+    actual_rotated = self.normalize_angle(self.current_yaw - start_yaw)
+    self.get_logger().info(
+        f'Turn Complete! Target:'
+        f' {math.degrees(target_relative_angle):.1f}°, Achieved:'
+        f' {math.degrees(actual_rotated):.2f}°'
+    )
+
+    goal_handle.succeed()
+    result = MoveYaw.Result()
+    result.success = True
+    return result
+
+  def stop_robot(self):
+    cmd = Twist()
+    cmd.linear.x = 0.0
+    cmd.angular.z = 0.0
+    for _ in range(5):
+      self.cmd_pub.publish(cmd)
+      time.sleep(0.005)
+
+
+def main(args=None):
+  rclpy.init(args=args)
+  node = MovementYawServer()
+  executor = MultiThreadedExecutor()
+  executor.add_node(node)
+  try:
+    executor.spin()
+  except KeyboardInterrupt:
+    pass
+  finally:
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

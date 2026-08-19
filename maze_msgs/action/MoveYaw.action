@@ -1,0 +1,10 @@
+# Goal: Target rotation angle in radians and angular speed
+float32 angle
+float32 speed
+---
+# Result: Final status and total angle turned
+bool success
+float32 total_angle_turned
+---
+# Feedback: Real-time progress updates
+float32 current_angle
