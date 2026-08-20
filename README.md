@@ -34,11 +34,13 @@ source install/setup.bash
 1. Launch the Main Gazebo Simulation
 
 ```Bash
+source install/setup.sh
 ros2 launch maze_control maze_simulation_tb3.launch.py
 ```
 2. In a Another Terminal, Launch the maze Solver
 
 ```Bash
-ros2 launch maze_control solve_maze.launch.py
+source install/setup.sh
+ros2 launch maze_movment solve_maze.launch.py
 ```
 3. Enjoy the Moving Robot :)
