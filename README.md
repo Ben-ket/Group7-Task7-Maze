@@ -22,7 +22,7 @@ git clone https://github.com/Ben-ket/Group7-Task7-Maze.git
 
 ```Bash
 cd ~/ros2_ws
-colcon build --packages-select maze_movement maze_msgs
+colcon build
 ```
 -Source your setup environment:
 
