@@ -41,6 +41,6 @@ ros2 launch maze_control maze_simulation_tb3.launch.py
 
 ```Bash
 source install/setup.sh
-ros2 launch maze_movment solve_maze.launch.py
+ros2 launch maze_movement solve_maze.launch.py
 ```
 3. Enjoy the Moving Robot :)
