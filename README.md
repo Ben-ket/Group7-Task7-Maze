@@ -1,4 +1,4 @@
-# Group 7 Task7.2 - ROS 2 Maze Solver
+# Group 7 Task12.2 - ROS 2 Maze Solver - With PID Control Modification
 
 A Python-based ROS 2 package designed for using Actions & services in a robot simulation to solve a Maze
 
