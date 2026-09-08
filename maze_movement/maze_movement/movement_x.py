@@ -126,7 +126,7 @@ class MovementXServer(Node):
 
             signal,integral=self.pid_compute(error,prev_error,integral,dt)
             prev_error=error
-            signal=max(-max_speed,min(max_speed,signal))
+            signal=max(self.min_signal,min(self.max_speed,signal))
             twist=Twist()
             twist.linear.x=float(signal)
             # end of new part
