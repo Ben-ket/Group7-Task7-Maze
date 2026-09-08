@@ -8,7 +8,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from maze_msgs.action import MoveX
-
+from rcl_interfaces.msg import SetParametersResult
 
 class MovementXServer(Node):
 
@@ -25,7 +25,17 @@ class MovementXServer(Node):
         )
 
 
+        self.declare_parameter('linear.kp', 7)
+        self.declare_parameter('linear.ki', 0.1)
+        self.declare_parameter('linear.kd', 0.7)
 
+        self.kp = self.get_parameter('linear.kp').value
+        self.ki = self.get_parameter('linear.ki').value
+        self.kd = self.get_parameter('linear.kd').value
+
+        self.add_on_set_parameters_callback(self.param_callback)
+
+        self.max_speed=1
         self._cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
         self._odom_sub = self.create_subscription(
             Odometry,
@@ -48,7 +58,7 @@ class MovementXServer(Node):
         self.min_signal = -100
 
          # PID compute method
-    def pid_compute(self,error,prev_error,integral,dt):
+    def pid_compute(self,error,prev_error,integral,dt): 
          P=self.kp*error
          integral +=error*dt
          integral=max(-0.1,min(0.1,integral))
@@ -77,6 +87,17 @@ class MovementXServer(Node):
 
 
          return signal,integral
+
+
+    def param_callback(self, params):
+        for p in params:
+            if p.name == 'linear.kp':
+                self.kp = p.value
+            elif p.name == 'linear.ki':
+                self.ki = p.value
+            elif p.name == 'linear.kd':
+                self.kd = p.value
+        return SetParametersResult(successful=True)
         
          # end of new part
 
