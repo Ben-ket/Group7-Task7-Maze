@@ -52,17 +52,10 @@ class pid_controller:
             self.integral = new_integral
 
         # PID Output
-        output = (
-            self.Kp * error +
-            self.Ki * self.integral +
-            self.Kd * derivative
-        )
+        output = (self.Kp * error + self.Ki * self.integral + self.Kd * derivative)
 
         # Control Output Clamping
-        output = max(
-            self.output_min,
-            min(self.output_max, output)
-        )
+        output = max(self.output_min,min(self.output_max, output))
 
         self.previous_error = error
 
