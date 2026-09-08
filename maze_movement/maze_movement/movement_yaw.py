@@ -10,6 +10,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from maze_msgs.action import MoveYaw
 from nav_msgs.msg import Odometry
+from rcl_interfaces.msg import SetParametersResult
 
 
 class MovementYawServer(Node):
@@ -20,6 +21,18 @@ class MovementYawServer(Node):
         self.cb_group = ReentrantCallbackGroup()
         self.current_yaw = None
         self.odom_updated = False
+        self.declare_parameter('linear.kp', 7)
+        self.declare_parameter('linear.ki', 0.1)
+        self.declare_parameter('linear.kd', 0.7)
+
+        self.kp = self.get_parameter('linear.kp').value
+        self.ki = self.get_parameter('linear.ki').value
+        self.kd = self.get_parameter('linear.kd').value
+
+        self.add_on_set_parameters_callback(self.param_callback)
+        self.max_signal = 100
+        self.min_signal = -100
+
 
         self.create_subscription(
             Odometry,
@@ -69,8 +82,37 @@ class MovementYawServer(Node):
         # Derivative
         D = self.kd * ((error - prev_error) / dt) if dt > 0 else 0.0
 
-        desired_speed = P + I + D
-        return desired_speed, integral
+        signal = P + I + D
+
+        # zero crossing reset
+        if error * prev_error < 0:
+            integral = 0.0
+
+        new_integral = integral + error * dt
+
+        predicted_signal = (
+            self.Kp * error +
+            self.Ki * new_integral +
+            D
+        )
+
+        if (self.output_min < predicted_signal < self.output_max
+            or (predicted_signal >= self.max_signal and error < 0)
+            or (predicted_signal <= self.min_signal and error > 0)):
+            integral = new_integral  
+
+        return signal , integral
+
+    def param_callback(self, params):
+        for p in params:
+            if p.name == 'linear.kp':
+                self.kp = p.value
+            elif p.name == 'linear.ki':
+                self.ki = p.value
+            elif p.name == 'linear.kd':
+                self.kd = p.value
+        return SetParametersResult(successful=True)
+    
 
     def execute_callback(self, goal_handle):
         self.odom_updated = False
@@ -127,8 +169,8 @@ class MovementYawServer(Node):
             else:
                 stable_count = 0
 
-            desired_speed, integral = self.compute_pid(error, prev_error, integral, dt)
-            desired_speed = max(-max_speed, min(max_speed, desired_speed))
+            signal, integral = self.compute_pid(error, prev_error, integral, dt)
+            signal = max(-max_speed, min(max_speed, signal))
 
             # limit acceleration
             max_speed_change = max_accel * dt
