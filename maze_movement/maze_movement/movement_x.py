@@ -44,6 +44,8 @@ class MovementXServer(Node):
         self.kd=0.50
 
         self.max_speed=0.5
+        self.max_signal = 100
+        self.min_signal = -100
 
          # PID compute method
     def pid_compute(self,error,prev_error,integral,dt):
@@ -54,6 +56,26 @@ class MovementXServer(Node):
          derivative=(error-prev_error)/dt if dt>0 else 0.0
          D=self.kd*derivative 
          signal=P+I+D 
+         # zero crossing reset
+         if error * prev_error < 0:
+            integral = 0.0
+
+        #conditional integration  
+
+         new_integral = integral + error * dt
+
+         predicted_signal = (
+            self.Kp * error +
+            self.Ki * new_integral +
+            self.Kd * derivative
+        )
+
+         if (self.output_min < predicted_signal < self.output_max
+            or (predicted_signal >= self.max_signal and error < 0)
+            or (predicted_signal <= self.min_signal and error > 0)):
+            integral = new_integral  
+
+
          return signal,integral
         
          # end of new part
