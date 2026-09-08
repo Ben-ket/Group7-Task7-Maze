@@ -37,6 +37,28 @@ class MovementXServer(Node):
 
         self.current_x = None
         self.current_y = None
+        # new part
+        # PID variables
+        self.kp=3.5
+        self.ki=0.5
+        self.kd=0.50
+
+        self.max_speed=0.5
+
+         # PID compute method
+    def pid_compute(self,error,prev_error,integral,dt):
+         P=self.kp*error
+         integral +=error*dt
+         integral=max(-0.1,min(0.1,integral))
+         I=self.ki*integral
+         derivative=(error-prev_error)/dt if dt>0 else 0.0
+         D=self.kd*derivative 
+         signal=P+I+D 
+         return signal,integral
+        
+         # end of new part
+
+
 
     def odom_callback(self, msg):
         self.current_x = msg.pose.pose.position.x
@@ -56,18 +78,36 @@ class MovementXServer(Node):
 
         if goal_handle.request.distance < 0:
             speed = -abs(speed)
-
-        twist = Twist()
-        twist.linear.x = float(speed)
+        max_speed=min(abs(speed),self.max_speed)
+    
+        # new part
+        integral=0.0
+        prev_error=0.0
+        dt=0.02
+        # end of new part
+                
 
         rate = self.create_rate(20)
+        
+       
+        
 
         while rclpy.ok():
+        
             dist_traveled = math.hypot(self.current_x - start_x, self.current_y - start_y)
-
+            error=target_dist-dist_traveled
+            if error<=0.01:
+             break
             if dist_traveled >= target_dist:
                 break
+            # new part
 
+            signal,integral=self.pid_compute(error,prev_error,integral,dt)
+            prev_error=error
+            signal=max(-max_speed,min(max_speed,signal))
+            twist=Twist()
+            twist.linear.x=float(signal)
+            # end of new part
             self._cmd_pub.publish(twist)
             rate.sleep()
 
@@ -80,6 +120,7 @@ class MovementXServer(Node):
         result = MoveX.Result()
         result.success = True
         return result
+    
 
 
 def main():
