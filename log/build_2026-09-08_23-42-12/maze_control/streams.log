@@ -1,0 +1,54 @@
+[0.996s] Invoking command in '/home/abdullah/task12/Group7-Task7-Maze/maze_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/maze_control build --build-base /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build install --record /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/install.log --install-scripts $base/lib/maze_control --single-version-externally-managed install_data
+[1.215s] running egg_info
+[1.215s] creating ../build/maze_control/maze_control.egg-info
+[1.231s] writing ../build/maze_control/maze_control.egg-info/PKG-INFO
+[1.232s] writing dependency_links to ../build/maze_control/maze_control.egg-info/dependency_links.txt
+[1.232s] writing entry points to ../build/maze_control/maze_control.egg-info/entry_points.txt
+[1.232s] writing requirements to ../build/maze_control/maze_control.egg-info/requires.txt
+[1.232s] writing top-level names to ../build/maze_control/maze_control.egg-info/top_level.txt
+[1.232s] writing manifest file '../build/maze_control/maze_control.egg-info/SOURCES.txt'
+[1.265s] reading manifest file '../build/maze_control/maze_control.egg-info/SOURCES.txt'
+[1.265s] writing manifest file '../build/maze_control/maze_control.egg-info/SOURCES.txt'
+[1.265s] running build
+[1.266s] running build_py
+[1.266s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build
+[1.266s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib
+[1.266s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control
+[1.266s] copying maze_control/switch_walls.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control
+[1.266s] copying maze_control/__init__.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control
+[1.266s] copying maze_control/maze_timer_node.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control
+[1.266s] copying maze_control/wall_retraction_service.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control
+[1.266s] running install
+[1.271s] running install_lib
+[1.288s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control
+[1.288s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control/switch_walls.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control
+[1.288s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control/__init__.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control
+[1.288s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control/maze_timer_node.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control
+[1.288s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build/lib/maze_control/wall_retraction_service.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control
+[1.289s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control/switch_walls.py to switch_walls.cpython-312.pyc
+[1.289s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control/__init__.py to __init__.cpython-312.pyc
+[1.289s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control/maze_timer_node.py to maze_timer_node.cpython-312.pyc
+[1.290s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control/wall_retraction_service.py to wall_retraction_service.cpython-312.pyc
+[1.291s] running install_data
+[1.291s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/ament_index
+[1.291s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/ament_index/resource_index
+[1.291s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/ament_index/resource_index/packages
+[1.291s] copying resource/maze_control -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/ament_index/resource_index/packages
+[1.291s] copying package.xml -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control
+[1.291s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/launch
+[1.291s] copying launch/maze_simulation_tb3.launch.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/launch
+[1.291s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/worlds
+[1.291s] copying worlds/maze_world.sdf -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/worlds
+[1.292s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/config
+[1.292s] copying config/bridge_config.yaml -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/config
+[1.292s] copying config/gui.config -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/config
+[1.292s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/models
+[1.292s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/share/maze_control/models/simple_robot
+[1.292s] running install_egg_info
+[1.310s] Copying ../build/maze_control/maze_control.egg-info to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info
+[1.311s] running install_scripts
+[1.425s] Installing maze_timer_node script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control
+[1.426s] Installing switch_walls script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control
+[1.426s] Installing wall_retraction_service script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control
+[1.426s] writing list of installed files to '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/install.log'
+[1.458s] Invoked command in '/home/abdullah/task12/Group7-Task7-Maze/maze_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/maze_control build --build-base /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build install --record /home/abdullah/task12/Group7-Task7-Maze/build/maze_control/install.log --install-scripts $base/lib/maze_control --single-version-externally-managed install_data

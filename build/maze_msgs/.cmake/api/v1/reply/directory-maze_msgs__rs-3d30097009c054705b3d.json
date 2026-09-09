@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "maze_msgs__rs",
+		"source" : "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/maze_msgs__rs"
+	}
+}

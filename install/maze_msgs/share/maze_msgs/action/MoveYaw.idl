@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from maze_msgs/action/MoveYaw.action
+// generated code does not contain a copyright notice
+
+
+module maze_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal: Target rotation angle in radians and angular speed")
+    struct MoveYaw_Goal {
+      float angle;
+
+      float speed;
+    };
+    @verbatim (language="comment", text=
+      "Result: Final status and total angle turned")
+    struct MoveYaw_Result {
+      boolean success;
+
+      float total_angle_turned;
+    };
+    @verbatim (language="comment", text=
+      "Feedback: Real-time progress updates")
+    struct MoveYaw_Feedback {
+      float current_angle;
+    };
+  };
+};

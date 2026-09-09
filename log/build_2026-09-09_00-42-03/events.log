@@ -1,0 +1,256 @@
+[0.000000] (-) TimerEvent: {}
+[0.000546] (maze_control) JobQueued: {'identifier': 'maze_control', 'dependencies': OrderedDict()}
+[0.000589] (maze_movement) JobQueued: {'identifier': 'maze_movement', 'dependencies': OrderedDict()}
+[0.000612] (maze_msgs) JobQueued: {'identifier': 'maze_msgs', 'dependencies': OrderedDict()}
+[0.000630] (maze_control) JobStarted: {'identifier': 'maze_control'}
+[0.006292] (maze_movement) JobStarted: {'identifier': 'maze_movement'}
+[0.008546] (maze_msgs) JobStarted: {'identifier': 'maze_msgs'}
+[0.099950] (-) TimerEvent: {}
+[0.200225] (-) TimerEvent: {}
+[0.270989] (maze_msgs) JobProgress: {'identifier': 'maze_msgs', 'progress': 'cmake'}
+[0.271496] (maze_msgs) JobProgress: {'identifier': 'maze_msgs', 'progress': 'build'}
+[0.272042] (maze_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs', '--', '-j16', '-l16'], 'cwd': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs', 'env': OrderedDict({'USER': 'abdullah', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'HOME': '/home/abdullah', 'OLDPWD': '/home/abdullah', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2383', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2634', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'abdullah', 'JOURNAL_STREAM': '10:22188', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'abdullah', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/abdullah-Zenbook-UM3402YAR-UM3402YA:@/tmp/.ICE-unix/2634,unix/abdullah-Zenbook-UM3402YAR-UM3402YA:/tmp/.ICE-unix/2634', 'INVOCATION_ID': '8f909e6834894a3f905834bdba145a8a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'TILIX_ID': '0cf74c35-cf84-4de1-a196-1e490ab03104', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FA2FV3', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.300315] (-) TimerEvent: {}
+[0.318868] (maze_msgs) StdoutLine: {'line': b'[  4%] Built target maze_msgs__rosidl_generator_type_description\n'}
+[0.319109] (maze_msgs) StdoutLine: {'line': b'[  4%] Built target maze_msgs__rs\n'}
+[0.327529] (maze_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_maze_msgs\n'}
+[0.335654] (maze_msgs) StdoutLine: {'line': b'[  6%] Built target maze_msgs__cpp\n'}
+[0.340146] (maze_msgs) StdoutLine: {'line': b'[ 24%] Built target maze_msgs__rosidl_generator_c\n'}
+[0.363667] (maze_msgs) StdoutLine: {'line': b'[ 42%] Built target maze_msgs__rosidl_typesupport_c\n'}
+[0.363908] (maze_msgs) StdoutLine: {'line': b'[ 42%] Built target maze_msgs__rosidl_typesupport_introspection_c\n'}
+[0.364046] (maze_msgs) StdoutLine: {'line': b'[ 51%] Built target maze_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.366320] (maze_msgs) StdoutLine: {'line': b'[ 68%] Built target maze_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.366437] (maze_msgs) StdoutLine: {'line': b'[ 68%] Built target maze_msgs__rosidl_typesupport_cpp\n'}
+[0.370361] (maze_msgs) StdoutLine: {'line': b'[ 77%] Built target maze_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.388384] (maze_msgs) StdoutLine: {'line': b'[ 77%] Built target maze_msgs\n'}
+[0.400400] (-) TimerEvent: {}
+[0.408476] (maze_msgs) StdoutLine: {'line': b'[ 80%] Built target maze_msgs__py\n'}
+[0.433174] (maze_msgs) StdoutLine: {'line': b'[ 86%] Built target maze_msgs__rosidl_generator_py\n'}
+[0.454723] (maze_msgs) StdoutLine: {'line': b'[100%] Built target maze_msgs_s__rosidl_typesupport_c\n'}
+[0.454912] (maze_msgs) StdoutLine: {'line': b'[100%] Built target maze_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[0.454997] (maze_msgs) StdoutLine: {'line': b'[100%] Built target maze_msgs_s__rosidl_typesupport_introspection_c\n'}
+[0.475668] (maze_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.484999] (maze_msgs) StdoutLine: {'line': b'writing maze_msgs.egg-info/PKG-INFO\n'}
+[0.485186] (maze_msgs) StdoutLine: {'line': b'writing dependency_links to maze_msgs.egg-info/dependency_links.txt\n'}
+[0.485310] (maze_msgs) StdoutLine: {'line': b'writing top-level names to maze_msgs.egg-info/top_level.txt\n'}
+[0.500459] (-) TimerEvent: {}
+[0.510865] (maze_msgs) StdoutLine: {'line': b"reading manifest file 'maze_msgs.egg-info/SOURCES.txt'\n"}
+[0.511421] (maze_msgs) StdoutLine: {'line': b"writing manifest file 'maze_msgs.egg-info/SOURCES.txt'\n"}
+[0.536791] (maze_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_maze_msgs_egg\n'}
+[0.547704] (maze_msgs) CommandEnded: {'returncode': 0}
+[0.548302] (maze_msgs) JobProgress: {'identifier': 'maze_msgs', 'progress': 'install'}
+[0.555964] (maze_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs'], 'cwd': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs', 'env': OrderedDict({'USER': 'abdullah', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'HOME': '/home/abdullah', 'OLDPWD': '/home/abdullah', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2383', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2634', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'abdullah', 'JOURNAL_STREAM': '10:22188', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'abdullah', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/abdullah-Zenbook-UM3402YAR-UM3402YA:@/tmp/.ICE-unix/2634,unix/abdullah-Zenbook-UM3402YAR-UM3402YA:/tmp/.ICE-unix/2634', 'INVOCATION_ID': '8f909e6834894a3f905834bdba145a8a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'TILIX_ID': '0cf74c35-cf84-4de1-a196-1e490ab03104', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FA2FV3', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.562629] (maze_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.562776] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/ament_index/resource_index/rosidl_interfaces/maze_msgs\n'}
+[0.562882] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveX.json\n'}
+[0.562985] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveYaw.json\n'}
+[0.563091] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.563227] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg\n'}
+[0.563303] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.563402] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.563477] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.563575] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__type_support.h\n'}
+[0.563733] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__functions.h\n'}
+[0.563832] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__functions.c\n'}
+[0.563909] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__struct.h\n'}
+[0.563994] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__type_support.c\n'}
+[0.564051] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__type_support.c\n'}
+[0.564116] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__functions.h\n'}
+[0.564195] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__functions.c\n'}
+[0.564260] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__description.c\n'}
+[0.564321] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__type_support.h\n'}
+[0.564414] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__struct.h\n'}
+[0.564493] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__description.c\n'}
+[0.564553] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/move_x.h\n'}
+[0.564629] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/move_yaw.h\n'}
+[0.564726] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/library_path.sh\n'}
+[0.564801] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/library_path.dsv\n'}
+[0.564873] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_generator_c.so\n'}
+[0.564934] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.564989] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg\n'}
+[0.565044] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.565128] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.565186] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.565261] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__rosidl_typesupport_fastrtps_c.h\n'}
+[0.565320] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__rosidl_typesupport_fastrtps_c.h\n'}
+[0.565403] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.565463] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.565553] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg\n'}
+[0.565645] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.565701] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.565755] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.565815] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__rosidl_typesupport_introspection_c.h\n'}
+[0.565890] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__type_support.c\n'}
+[0.565948] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__rosidl_typesupport_introspection_c.h\n'}
+[0.566004] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__type_support.c\n'}
+[0.566067] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.566146] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_c.so\n'}
+[0.566223] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.566309] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg\n'}
+[0.566421] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.566504] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.566578] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/move_x.hpp\n'}
+[0.566654] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.566731] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__traits.hpp\n'}
+[0.566840] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__struct.hpp\n'}
+[0.566900] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__struct.hpp\n'}
+[0.566967] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__type_support.hpp\n'}
+[0.567026] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__type_support.hpp\n'}
+[0.567134] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__traits.hpp\n'}
+[0.567197] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__builder.hpp\n'}
+[0.567272] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__builder.hpp\n'}
+[0.567335] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/move_yaw.hpp\n'}
+[0.567421] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.567490] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg\n'}
+[0.567545] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.567600] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.567669] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.567724] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/dds_fastrtps\n'}
+[0.567778] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.567837] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.567912] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.567988] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs\n'}
+[0.568046] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action\n'}
+[0.568137] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail\n'}
+[0.568229] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__type_support.cpp\n'}
+[0.568286] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_yaw__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.568340] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.568412] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/include/maze_msgs/maze_msgs/action/detail/move_x__type_support.cpp\n'}
+[0.568472] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.568664] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_typesupport_cpp.so\n'}
+[0.568834] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/pythonpath.sh\n'}
+[0.568928] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/pythonpath.dsv\n'}
+[0.569004] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs-0.0.0-py3.12.egg-info\n'}
+[0.569077] (maze_msgs) StdoutLine: {'line': b'-- Installing: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[0.569209] (maze_msgs) StdoutLine: {'line': b'-- Installing: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[0.569336] (maze_msgs) StdoutLine: {'line': b'-- Installing: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[0.569464] (maze_msgs) StdoutLine: {'line': b'-- Installing: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[0.569620] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs\n'}
+[0.569716] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.569813] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/_maze_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.569875] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_c.so\n'}
+[0.569934] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/__init__.py\n'}
+[0.570026] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.570100] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/_maze_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.570157] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action\n'}
+[0.570213] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action/_move_yaw_s.c\n'}
+[0.570268] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action/_move_yaw.py\n'}
+[0.570323] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action/_move_x.py\n'}
+[0.570376] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action/_move_x_s.c\n'}
+[0.570429] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action/__init__.py\n'}
+[0.570483] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/_maze_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.596153] (maze_msgs) StdoutLine: {'line': b"Listing '/home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs'...\n"}
+[0.596326] (maze_msgs) StdoutLine: {'line': b"Listing '/home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/action'...\n"}
+[0.600129] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.600459] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.600557] (-) TimerEvent: {}
+[0.600763] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/python3.12/site-packages/maze_msgs/maze_msgs_s__rosidl_typesupport_c.so\n'}
+[0.601073] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/lib/libmaze_msgs__rosidl_generator_py.so\n'}
+[0.601264] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/ament_index/resource_index/rust_packages/maze_msgs\n'}
+[0.601372] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust\n'}
+[0.601480] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/Cargo.toml\n'}
+[0.601593] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/build.rs\n'}
+[0.601659] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/src\n'}
+[0.601793] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/src/lib.rs\n'}
+[0.601886] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/src/action.rs\n'}
+[0.601964] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/src/action\n'}
+[0.602049] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/rust/src/action/rmw.rs\n'}
+[0.602168] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveX.idl\n'}
+[0.602261] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveYaw.idl\n'}
+[0.602321] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveX.action\n'}
+[0.602378] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/action/MoveYaw.action\n'}
+[0.602433] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/ament_index/resource_index/package_run_dependencies/maze_msgs\n'}
+[0.602502] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/ament_index/resource_index/parent_prefix_path/maze_msgs\n'}
+[0.602562] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/ament_prefix_path.sh\n'}
+[0.602641] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/ament_prefix_path.dsv\n'}
+[0.602713] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/path.sh\n'}
+[0.602798] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/environment/path.dsv\n'}
+[0.602855] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/local_setup.bash\n'}
+[0.602941] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/local_setup.sh\n'}
+[0.603001] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/local_setup.zsh\n'}
+[0.603109] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/local_setup.dsv\n'}
+[0.603169] (maze_msgs) StdoutLine: {'line': b'-- Installing: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/package.dsv\n'}
+[0.603250] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/ament_index/resource_index/packages/maze_msgs\n'}
+[0.603336] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_generator_cExport.cmake\n'}
+[0.603418] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.603489] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.603636] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.603742] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.603848] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.603940] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.604006] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.604103] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.604165] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.604227] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.604286] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.604348] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.604411] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.604470] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.604529] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.604587] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/export_maze_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.604646] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.604708] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.604779] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.604839] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.604902] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.604965] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.605027] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.605105] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[0.605166] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgsConfig.cmake\n'}
+[0.605225] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/cmake/maze_msgsConfig-version.cmake\n'}
+[0.605284] (maze_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/abdullah/task12/Group7-Task7-Maze/install/maze_msgs/share/maze_msgs/package.xml\n'}
+[0.606634] (maze_msgs) CommandEnded: {'returncode': 0}
+[0.625495] (maze_msgs) JobEnded: {'identifier': 'maze_msgs', 'rc': 0}
+[0.665502] (maze_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/maze_control', 'build', '--build-base', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/build', 'install', '--record', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/install.log', '--install-scripts', '$base/lib/maze_control', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/abdullah/task12/Group7-Task7-Maze/maze_control', 'env': {'USER': 'abdullah', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'HOME': '/home/abdullah', 'OLDPWD': '/home/abdullah', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2383', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2634', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'abdullah', 'JOURNAL_STREAM': '10:22188', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'abdullah', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/abdullah-Zenbook-UM3402YAR-UM3402YA:@/tmp/.ICE-unix/2634,unix/abdullah-Zenbook-UM3402YAR-UM3402YA:/tmp/.ICE-unix/2634', 'INVOCATION_ID': '8f909e6834894a3f905834bdba145a8a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'TILIX_ID': '0cf74c35-cf84-4de1-a196-1e490ab03104', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FA2FV3', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'PYTHONPATH': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages:'}, 'shell': False}
+[0.672881] (maze_movement) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/maze_movement', 'build', '--build-base', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build', 'install', '--record', '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/install.log', '--install-scripts', '$base/lib/maze_movement', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/abdullah/task12/Group7-Task7-Maze/maze_movement', 'env': {'USER': 'abdullah', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'HOME': '/home/abdullah', 'OLDPWD': '/home/abdullah', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '2383', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2634', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'abdullah', 'JOURNAL_STREAM': '10:22188', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'abdullah', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/abdullah-Zenbook-UM3402YAR-UM3402YA:@/tmp/.ICE-unix/2634,unix/abdullah-Zenbook-UM3402YAR-UM3402YA:/tmp/.ICE-unix/2634', 'INVOCATION_ID': '8f909e6834894a3f905834bdba145a8a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'TILIX_ID': '0cf74c35-cf84-4de1-a196-1e490ab03104', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FA2FV3', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=3a42694cbfe1ec9b925a2ddd6aa080c7', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'PYTHONPATH': '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages:'}, 'shell': False}
+[0.700656] (-) TimerEvent: {}
+[0.800885] (-) TimerEvent: {}
+[0.821410] (maze_control) StdoutLine: {'line': b'running egg_info\n'}
+[0.825205] (maze_movement) StdoutLine: {'line': b'running egg_info\n'}
+[0.830160] (maze_control) StdoutLine: {'line': b'writing ../build/maze_control/maze_control.egg-info/PKG-INFO\n'}
+[0.830435] (maze_control) StdoutLine: {'line': b'writing dependency_links to ../build/maze_control/maze_control.egg-info/dependency_links.txt\n'}
+[0.830673] (maze_control) StdoutLine: {'line': b'writing entry points to ../build/maze_control/maze_control.egg-info/entry_points.txt\n'}
+[0.830829] (maze_control) StdoutLine: {'line': b'writing requirements to ../build/maze_control/maze_control.egg-info/requires.txt\n'}
+[0.830956] (maze_control) StdoutLine: {'line': b'writing top-level names to ../build/maze_control/maze_control.egg-info/top_level.txt\n'}
+[0.833657] (maze_movement) StdoutLine: {'line': b'writing ../build/maze_movement/maze_movement.egg-info/PKG-INFO\n'}
+[0.833857] (maze_movement) StdoutLine: {'line': b'writing dependency_links to ../build/maze_movement/maze_movement.egg-info/dependency_links.txt\n'}
+[0.834047] (maze_movement) StdoutLine: {'line': b'writing entry points to ../build/maze_movement/maze_movement.egg-info/entry_points.txt\n'}
+[0.834175] (maze_movement) StdoutLine: {'line': b'writing requirements to ../build/maze_movement/maze_movement.egg-info/requires.txt\n'}
+[0.834273] (maze_movement) StdoutLine: {'line': b'writing top-level names to ../build/maze_movement/maze_movement.egg-info/top_level.txt\n'}
+[0.849194] (maze_control) StdoutLine: {'line': b"reading manifest file '../build/maze_control/maze_control.egg-info/SOURCES.txt'\n"}
+[0.850121] (maze_control) StdoutLine: {'line': b"writing manifest file '../build/maze_control/maze_control.egg-info/SOURCES.txt'\n"}
+[0.850257] (maze_control) StdoutLine: {'line': b'running build\n'}
+[0.850356] (maze_control) StdoutLine: {'line': b'running build_py\n'}
+[0.850594] (maze_control) StdoutLine: {'line': b'running install\n'}
+[0.852696] (maze_movement) StdoutLine: {'line': b"reading manifest file '../build/maze_movement/maze_movement.egg-info/SOURCES.txt'\n"}
+[0.854100] (maze_movement) StdoutLine: {'line': b"writing manifest file '../build/maze_movement/maze_movement.egg-info/SOURCES.txt'\n"}
+[0.854223] (maze_movement) StdoutLine: {'line': b'running build\n'}
+[0.854327] (maze_movement) StdoutLine: {'line': b'running build_py\n'}
+[0.854587] (maze_movement) StdoutLine: {'line': b'running install\n'}
+[0.855284] (maze_control) StdoutLine: {'line': b'running install_lib\n'}
+[0.859649] (maze_movement) StdoutLine: {'line': b'running install_lib\n'}
+[0.865101] (maze_control) StdoutLine: {'line': b'running install_data\n'}
+[0.865305] (maze_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.869010] (maze_movement) StdoutLine: {'line': b'running install_data\n'}
+[0.869177] (maze_movement) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.874724] (maze_control) StdoutLine: {'line': b"removing '/home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info' (and everything under it)\n"}
+[0.875008] (maze_control) StdoutLine: {'line': b'Copying ../build/maze_control/maze_control.egg-info to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info\n'}
+[0.875795] (maze_control) StdoutLine: {'line': b'running install_scripts\n'}
+[0.878671] (maze_movement) StdoutLine: {'line': b"removing '/home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[0.878977] (maze_movement) StdoutLine: {'line': b'Copying ../build/maze_movement/maze_movement.egg-info to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement-0.0.0-py3.12.egg-info\n'}
+[0.879841] (maze_movement) StdoutLine: {'line': b'running install_scripts\n'}
+[0.900979] (-) TimerEvent: {}
+[0.949407] (maze_control) StdoutLine: {'line': b'Installing maze_timer_node script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control\n'}
+[0.949701] (maze_control) StdoutLine: {'line': b'Installing switch_walls script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control\n'}
+[0.949855] (maze_control) StdoutLine: {'line': b'Installing wall_retraction_service script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_control/lib/maze_control\n'}
+[0.950125] (maze_control) StdoutLine: {'line': b"writing list of installed files to '/home/abdullah/task12/Group7-Task7-Maze/build/maze_control/install.log'\n"}
+[0.954560] (maze_movement) StdoutLine: {'line': b'Installing maze_solver_client script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement\n'}
+[0.954771] (maze_movement) StdoutLine: {'line': b'Installing movement_x script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement\n'}
+[0.954951] (maze_movement) StdoutLine: {'line': b'Installing movement_yaw script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement\n'}
+[0.955090] (maze_movement) StdoutLine: {'line': b'Installing solve_maze script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement\n'}
+[0.955460] (maze_movement) StdoutLine: {'line': b"writing list of installed files to '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/install.log'\n"}
+[0.980786] (maze_control) CommandEnded: {'returncode': 0}
+[0.987737] (maze_control) JobEnded: {'identifier': 'maze_control', 'rc': 0}
+[0.988815] (maze_movement) CommandEnded: {'returncode': 0}
+[0.996044] (maze_movement) JobEnded: {'identifier': 'maze_movement', 'rc': 0}
+[0.996728] (-) EventReactorShutdown: {}

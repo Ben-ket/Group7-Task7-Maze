@@ -1,0 +1,10 @@
+# Goal: Target linear distance and speed
+float32 distance
+float32 speed
+---
+# Result: Final status and total distance traveled
+bool success
+float32 total_distance_traveled
+---
+# Feedback: Real-time progress updates
+float32 current_distance

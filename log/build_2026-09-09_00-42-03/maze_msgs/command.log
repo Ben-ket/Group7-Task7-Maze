@@ -1,0 +1,4 @@
+Invoking command in '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs -- -j16 -l16
+Invoked command in '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs -- -j16 -l16
+Invoking command in '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs
+Invoked command in '/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs

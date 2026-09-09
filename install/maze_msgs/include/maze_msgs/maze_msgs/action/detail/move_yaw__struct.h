@@ -1,0 +1,276 @@
+// generated from rosidl_generator_c/resource/idl__struct.h.em
+// with input from maze_msgs:action/MoveYaw.idl
+// generated code does not contain a copyright notice
+
+// IWYU pragma: private, include "maze_msgs/action/move_yaw.h"
+
+
+#ifndef MAZE_MSGS__ACTION__DETAIL__MOVE_YAW__STRUCT_H_
+#define MAZE_MSGS__ACTION__DETAIL__MOVE_YAW__STRUCT_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+
+// Constants defined in the message
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_Goal
+{
+  float angle;
+  float speed;
+} maze_msgs__action__MoveYaw_Goal;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_Goal.
+typedef struct maze_msgs__action__MoveYaw_Goal__Sequence
+{
+  maze_msgs__action__MoveYaw_Goal * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_Goal__Sequence;
+
+// Constants defined in the message
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_Result
+{
+  bool success;
+  float total_angle_turned;
+} maze_msgs__action__MoveYaw_Result;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_Result.
+typedef struct maze_msgs__action__MoveYaw_Result__Sequence
+{
+  maze_msgs__action__MoveYaw_Result * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_Result__Sequence;
+
+// Constants defined in the message
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_Feedback
+{
+  float current_angle;
+} maze_msgs__action__MoveYaw_Feedback;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_Feedback.
+typedef struct maze_msgs__action__MoveYaw_Feedback__Sequence
+{
+  maze_msgs__action__MoveYaw_Feedback * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_Feedback__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'goal_id'
+#include "unique_identifier_msgs/msg/detail/uuid__struct.h"
+// Member 'goal'
+#include "maze_msgs/action/detail/move_yaw__struct.h"
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Request
+{
+  unique_identifier_msgs__msg__UUID goal_id;
+  maze_msgs__action__MoveYaw_Goal goal;
+} maze_msgs__action__MoveYaw_SendGoal_Request;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_SendGoal_Request.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Request__Sequence
+{
+  maze_msgs__action__MoveYaw_SendGoal_Request * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_SendGoal_Request__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'stamp'
+#include "builtin_interfaces/msg/detail/time__struct.h"
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Response
+{
+  bool accepted;
+  builtin_interfaces__msg__Time stamp;
+} maze_msgs__action__MoveYaw_SendGoal_Response;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_SendGoal_Response.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Response__Sequence
+{
+  maze_msgs__action__MoveYaw_SendGoal_Response * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_SendGoal_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+#include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  maze_msgs__action__MoveYaw_SendGoal_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  maze_msgs__action__MoveYaw_SendGoal_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  maze_msgs__action__MoveYaw_SendGoal_Request__Sequence request;
+  maze_msgs__action__MoveYaw_SendGoal_Response__Sequence response;
+} maze_msgs__action__MoveYaw_SendGoal_Event;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_SendGoal_Event.
+typedef struct maze_msgs__action__MoveYaw_SendGoal_Event__Sequence
+{
+  maze_msgs__action__MoveYaw_SendGoal_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_SendGoal_Event__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'goal_id'
+// already included above
+// #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Request
+{
+  unique_identifier_msgs__msg__UUID goal_id;
+} maze_msgs__action__MoveYaw_GetResult_Request;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_GetResult_Request.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Request__Sequence
+{
+  maze_msgs__action__MoveYaw_GetResult_Request * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_GetResult_Request__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'result'
+// already included above
+// #include "maze_msgs/action/detail/move_yaw__struct.h"
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Response
+{
+  int8_t status;
+  maze_msgs__action__MoveYaw_Result result;
+} maze_msgs__action__MoveYaw_GetResult_Response;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_GetResult_Response.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Response__Sequence
+{
+  maze_msgs__action__MoveYaw_GetResult_Response * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_GetResult_Response__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'info'
+// already included above
+// #include "service_msgs/msg/detail/service_event_info__struct.h"
+
+// constants for array fields with an upper bound
+// request
+enum
+{
+  maze_msgs__action__MoveYaw_GetResult_Event__request__MAX_SIZE = 1
+};
+// response
+enum
+{
+  maze_msgs__action__MoveYaw_GetResult_Event__response__MAX_SIZE = 1
+};
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Event
+{
+  service_msgs__msg__ServiceEventInfo info;
+  maze_msgs__action__MoveYaw_GetResult_Request__Sequence request;
+  maze_msgs__action__MoveYaw_GetResult_Response__Sequence response;
+} maze_msgs__action__MoveYaw_GetResult_Event;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_GetResult_Event.
+typedef struct maze_msgs__action__MoveYaw_GetResult_Event__Sequence
+{
+  maze_msgs__action__MoveYaw_GetResult_Event * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_GetResult_Event__Sequence;
+
+// Constants defined in the message
+
+// Include directives for member types
+// Member 'goal_id'
+// already included above
+// #include "unique_identifier_msgs/msg/detail/uuid__struct.h"
+// Member 'feedback'
+// already included above
+// #include "maze_msgs/action/detail/move_yaw__struct.h"
+
+/// Struct defined in action/MoveYaw in the package maze_msgs.
+typedef struct maze_msgs__action__MoveYaw_FeedbackMessage
+{
+  unique_identifier_msgs__msg__UUID goal_id;
+  maze_msgs__action__MoveYaw_Feedback feedback;
+} maze_msgs__action__MoveYaw_FeedbackMessage;
+
+// Struct for a sequence of maze_msgs__action__MoveYaw_FeedbackMessage.
+typedef struct maze_msgs__action__MoveYaw_FeedbackMessage__Sequence
+{
+  maze_msgs__action__MoveYaw_FeedbackMessage * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} maze_msgs__action__MoveYaw_FeedbackMessage__Sequence;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // MAZE_MSGS__ACTION__DETAIL__MOVE_YAW__STRUCT_H_

@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-e5e01f89bf94802f9380.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "maze_msgs__py",
+					"jsonFile" : "directory-maze_msgs__py-9fb7b2a85b3608ce23ed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/maze_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "maze_msgs__rs",
+					"jsonFile" : "directory-maze_msgs__rs-3d30097009c054705b3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/maze_msgs__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "maze_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_maze_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_maze_msgs_egg-a3332239908871a984f1.json",
+					"name" : "ament_cmake_python_build_maze_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_maze_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_maze_msgs-f35f7fe02da93fe1f93e.json",
+					"name" : "ament_cmake_python_copy_maze_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs-a04f4987dde759ee8f14.json",
+					"name" : "maze_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__cpp-f10813acb183d742c619.json",
+					"name" : "maze_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "maze_msgs__py::@cb12158fac55680429fd",
+					"jsonFile" : "target-maze_msgs__py-a502cd9c976a9eae5892.json",
+					"name" : "maze_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_generator_c-9ae71ddd60d848169e49.json",
+					"name" : "maze_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_generator_py-dbd5cfe0bc157fc557fe.json",
+					"name" : "maze_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_generator_type_description-b3ed468bf94f5a3cb772.json",
+					"name" : "maze_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_c-ea293acf751133f5f764.json",
+					"name" : "maze_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_cpp-5a58a764768a0fbc96a9.json",
+					"name" : "maze_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_fastrtps_c-ad1a98779345baa862af.json",
+					"name" : "maze_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_fastrtps_cpp-8e65624c3b5fce9dda92.json",
+					"name" : "maze_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_introspection_c-cd0492a73e69b9d0b631.json",
+					"name" : "maze_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs__rosidl_typesupport_introspection_cpp-726d429ac98aae8eb491.json",
+					"name" : "maze_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "maze_msgs__rs::@fb80f76e4debb208b6b4",
+					"jsonFile" : "target-maze_msgs__rs-f1caf4a85a3e76d21011.json",
+					"name" : "maze_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs_s__rosidl_typesupport_c-d3a9d7920e8464054516.json",
+					"name" : "maze_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs_s__rosidl_typesupport_fastrtps_c-b24135ea10db9c01d727.json",
+					"name" : "maze_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs_s__rosidl_typesupport_introspection_c-e4dc87baab1a6c1e8a37.json",
+					"name" : "maze_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maze_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maze_msgs_uninstall-b2bbf16072daa5a0bcde.json",
+					"name" : "maze_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-29668587ffdac9c87067.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs",
+		"source" : "/home/abdullah/task12/Group7-Task7-Maze/maze_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

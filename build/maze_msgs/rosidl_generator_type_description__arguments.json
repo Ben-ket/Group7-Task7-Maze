@@ -1,0 +1,17 @@
+{
+  "package_name": "maze_msgs",
+  "output_dir": "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/rosidl_generator_type_description/maze_msgs",
+  "idl_tuples": [
+    "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/rosidl_adapter/maze_msgs:action/MoveX.idl",
+    "/home/abdullah/task12/Group7-Task7-Maze/build/maze_msgs/rosidl_adapter/maze_msgs:action/MoveYaw.idl"
+  ],
+  "include_paths": [
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "nav_msgs:/opt/ros/jazzy/share/nav_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

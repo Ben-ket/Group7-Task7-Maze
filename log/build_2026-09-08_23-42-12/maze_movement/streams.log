@@ -1,0 +1,51 @@
+[0.988s] Invoking command in '/home/abdullah/task12/Group7-Task7-Maze/maze_movement': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/maze_movement build --build-base /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build install --record /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/install.log --install-scripts $base/lib/maze_movement --single-version-externally-managed install_data
+[1.207s] running egg_info
+[1.208s] creating ../build/maze_movement/maze_movement.egg-info
+[1.224s] writing ../build/maze_movement/maze_movement.egg-info/PKG-INFO
+[1.224s] writing dependency_links to ../build/maze_movement/maze_movement.egg-info/dependency_links.txt
+[1.224s] writing entry points to ../build/maze_movement/maze_movement.egg-info/entry_points.txt
+[1.224s] writing requirements to ../build/maze_movement/maze_movement.egg-info/requires.txt
+[1.224s] writing top-level names to ../build/maze_movement/maze_movement.egg-info/top_level.txt
+[1.225s] writing manifest file '../build/maze_movement/maze_movement.egg-info/SOURCES.txt'
+[1.257s] reading manifest file '../build/maze_movement/maze_movement.egg-info/SOURCES.txt'
+[1.258s] writing manifest file '../build/maze_movement/maze_movement.egg-info/SOURCES.txt'
+[1.258s] running build
+[1.258s] running build_py
+[1.258s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build
+[1.258s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib
+[1.258s] creating /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.258s] copying maze_movement/maze_solver_client.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.259s] copying maze_movement/__init__.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.259s] copying maze_movement/movement_x.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.259s] copying maze_movement/movement_yaw.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.259s] copying maze_movement/solve_maze.py -> /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement
+[1.259s] running install
+[1.264s] running install_lib
+[1.280s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.280s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement/maze_solver_client.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.280s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement/__init__.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.281s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement/movement_x.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.281s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement/movement_yaw.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.281s] copying /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build/lib/maze_movement/solve_maze.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement
+[1.281s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement/maze_solver_client.py to maze_solver_client.cpython-312.pyc
+[1.282s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement/__init__.py to __init__.cpython-312.pyc
+[1.282s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement/movement_x.py to movement_x.cpython-312.pyc
+[1.284s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement/movement_yaw.py to movement_yaw.cpython-312.pyc
+[1.285s] byte-compiling /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement/solve_maze.py to solve_maze.cpython-312.pyc
+[1.285s] running install_data
+[1.285s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/ament_index
+[1.286s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/ament_index/resource_index
+[1.286s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/ament_index/resource_index/packages
+[1.286s] copying resource/maze_movement -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/ament_index/resource_index/packages
+[1.286s] copying package.xml -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/maze_movement
+[1.286s] creating /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/maze_movement/launch
+[1.286s] copying launch/solve_maze.launch.py -> /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/share/maze_movement/launch
+[1.286s] running install_egg_info
+[1.304s] Copying ../build/maze_movement/maze_movement.egg-info to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages/maze_movement-0.0.0-py3.12.egg-info
+[1.305s] running install_scripts
+[1.420s] Installing maze_solver_client script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement
+[1.420s] Installing movement_x script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement
+[1.420s] Installing movement_yaw script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement
+[1.420s] Installing solve_maze script to /home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/maze_movement
+[1.420s] writing list of installed files to '/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/install.log'
+[1.461s] Invoked command in '/home/abdullah/task12/Group7-Task7-Maze/maze_movement' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abdullah/task12/Group7-Task7-Maze/install/maze_movement/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/maze_movement build --build-base /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/build install --record /home/abdullah/task12/Group7-Task7-Maze/build/maze_movement/install.log --install-scripts $base/lib/maze_movement --single-version-externally-managed install_data

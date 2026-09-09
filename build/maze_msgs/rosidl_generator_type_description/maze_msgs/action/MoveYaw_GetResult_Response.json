@@ -1,0 +1,66 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "maze_msgs/action/MoveYaw_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "maze_msgs/action/MoveYaw_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "maze_msgs/action/MoveYaw_Result",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "total_angle_turned",
+            "type": {
+              "type_id": 10,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "maze_msgs/action/MoveYaw_GetResult_Response",
+      "hash_string": "RIHS01_e730f2c2734f2f65709a47f49a568cdf6b0dc64db370e8a917a586770e3044a1"
+    },
+    {
+      "type_name": "maze_msgs/action/MoveYaw_Result",
+      "hash_string": "RIHS01_914567ccbd8652f0de92442395f39fd1074a12453250894a3be9d610a3aa25e2"
+    }
+  ]
+}

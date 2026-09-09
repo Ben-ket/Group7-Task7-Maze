@@ -1,0 +1,7 @@
+{
+  "package_name": "maze_msgs",
+  "non_idl_tuples": [
+    "/home/abdullah/task12/Group7-Task7-Maze/maze_msgs:action/MoveX.action",
+    "/home/abdullah/task12/Group7-Task7-Maze/maze_msgs:action/MoveYaw.action"
+  ]
+}

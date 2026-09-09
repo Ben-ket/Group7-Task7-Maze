@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from maze_msgs/action/MoveX.action
+// generated code does not contain a copyright notice
+
+
+module maze_msgs {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal: Target linear distance and speed")
+    struct MoveX_Goal {
+      float distance;
+
+      float speed;
+    };
+    @verbatim (language="comment", text=
+      "Result: Final status and total distance traveled")
+    struct MoveX_Result {
+      boolean success;
+
+      float total_distance_traveled;
+    };
+    @verbatim (language="comment", text=
+      "Feedback: Real-time progress updates")
+    struct MoveX_Feedback {
+      float current_distance;
+    };
+  };
+};
